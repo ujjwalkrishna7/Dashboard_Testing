@@ -14,6 +14,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
+  display: inline-block;
   position: relative;
   top: 20px;
   left: 75px;

@@ -83,6 +83,7 @@ const SlickBar = styled.ul`
   color: var(--white);
   list-style: none;
   display: flex;
+  height: 85vh;
   flex-direction: column;
   align-items: center;
   background-color: var(--black);
