@@ -1,4 +1,5 @@
 import MotionHoc from "./MotionHoc";
+import { motion } from "framer-motion";
 
 import React from "react";
 import PropTypes from "prop-types";
@@ -22,17 +23,23 @@ const HomeComponent = ({ smallStats }) => (
     <Row>
       {smallStats.map((stats, idx) => (
         <Col className="col-lg mb-4" key={idx} {...stats.attrs}>
-          <SmallStats
-            id={`small-stats-${idx}`}
-            variation="1"
-            chartData={stats.datasets}
-            chartLabels={stats.chartLabels}
-            label={stats.label}
-            value={stats.value}
-            percentage={stats.percentage}
-            increase={stats.increase}
-            decrease={stats.decrease}
-          />
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1.0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <SmallStats
+              id={`small-stats-${idx}`}
+              variation="1"
+              chartData={stats.datasets}
+              chartLabels={stats.chartLabels}
+              label={stats.label}
+              value={stats.value}
+              percentage={stats.percentage}
+              increase={stats.increase}
+              decrease={stats.decrease}
+            />
+          </motion.div>
         </Col>
       ))}
     </Row>

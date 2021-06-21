@@ -1,5 +1,7 @@
 import { Route, Switch, useLocation } from "react-router";
+import { useState } from "react";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import SidebarRight from "./Components/SidebarRight/SidebarRight";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
@@ -22,11 +24,17 @@ const Pages = styled.div`
 `;
 
 function App() {
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+
+  const toggle = () => {
+    setSidebarIsOpen(!sidebarIsOpen);
+  };
   const location = useLocation();
   return (
     <>
-      <Navbar />
+      <Navbar toggle={toggle} />
       <Sidebar />
+      <SidebarRight sidebarIsOpen={sidebarIsOpen} toggle={toggle} />
       <Pages>
         <Container>
           <AnimatePresence exitBeforeEnter>
