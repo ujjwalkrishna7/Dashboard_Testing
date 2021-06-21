@@ -1,0 +1,32 @@
+/*
+logo - revamp
+{
+HOME
+
+scrollable elements 
+          -about, services, team
+}
+
+LOGIN/SIGNUP
+       - customer
+              -gauth, linked, facebook
+              -customer dashboard
+                    - review options = sort, filters, company details, indexes, bignames as cards, money earned, profile, etc
+        - company
+           -linkedn, gauth, facebook
+           -dashboard with statistics = https://themes-backend.material-ui.com/wp-content/uploads/2019/08/tabler-react.com_-min-e1565617941333.png
+
+
+Footer = Contact US | Jobs | Email | Copyright etc.
+          
+
+2 Interns: 
+UI/UX 
+Backend
+
+JITSI for VC/ abheet's project
+
+/* DESIGN LAYOUT */
+CUSTOMER DASHBOARD
+1. USER PROFILE PAGE - ARGON DASHBOARD user profile
+2. 
