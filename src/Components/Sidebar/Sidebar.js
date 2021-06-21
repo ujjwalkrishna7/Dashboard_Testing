@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FiSettings } from "react-icons/fi";
 import { BsChatDotsFill } from "react-icons/bs";
 import { FaBlog } from "react-icons/fa";
@@ -145,10 +145,7 @@ const Text = styled.span`
   transition: all 0.3s ease;
 `;
 
-const Sidebar = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
+const Sidebar = ({ click, handleClick }) => {
   return (
     <Container>
       <Button clicked={click} onClick={() => handleClick()}></Button>
