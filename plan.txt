@@ -1,32 +1,51 @@
-/*
-logo - revamp
-{
-HOME
+///7 days for admin to complete 85% of the admin (only front-end)
+//Admin
+-> Dashboard
+  = Recent reviewers with ratings and names
+  = recent Appointments
+  = charts
+    -- recent ratings over time
+    -- interactions frequency
+    -- country demographics
+    -- age (optional)
 
-scrollable elements 
-          -about, services, team
-}
+-> Admin Profile
+    = Edit Profile Page
+      **Name, Designation,company name,  about, working since , changing password, email provided by company
+      = subcription details and payments //discuss with vishesh (adding different plans)
 
-LOGIN/SIGNUP
-       - customer
-              -gauth, linked, facebook
-              -customer dashboard
-                    - review options = sort, filters, company details, indexes, bignames as cards, money earned, profile, etc
-        - company
-           -linkedn, gauth, facebook
-           -dashboard with statistics = https://themes-backend.material-ui.com/wp-content/uploads/2019/08/tabler-react.com_-min-e1565617941333.png
+-> Appointments Page (w/ calender which will have Appointments)
 
+-> Company Profile (accessible by users)
+   = LinkedIn-ish
+   = Company Name, Company logo, Company description, company tags, company hq addres, company customer helpline, company cover screen, company email
+   = Calender for avaialability
+   = Blog Posts
 
-Footer = Contact US | Jobs | Email | Copyright etc.
-          
+-> Chats page (convos with people, message history)
 
-2 Interns: 
-UI/UX 
-Backend
+(-> Video Call history (if time permits))
 
-JITSI for VC/ abheet's project
+-> Blogs Page 
+  = where they can write blogs to promote their company, on the website itself
+  (shards blog page )
 
-/* DESIGN LAYOUT */
-CUSTOMER DASHBOARD
-1. USER PROFILE PAGE - ARGON DASHBOARD user profile
-2. 
+///10 days for to complete 85% of the user (front-end and CVB on the backend)
+//Users
+-> (1st page after redirection) Feeds (Sort them according to interests)
+   -- blogs that admins create
+-> Dashboard
+   = small elements of everything
+->Company Index
+  _ search bar - that will list results
+     --- flippable cards with book an appointment btn
+        -> book an appointment on the company page
+-> edit Profile / user profile (definitely add payments option // payments with cryto, stripe, braintree, credits, debits ,UPI etc)
+   == argon react user profile
+-> Transanctions
+   = recent Transanctions
+   = search Transanctions
+   = Transanctions are clickable (receipt)
+-> Chat box page
+
+-> Appointments Page (w/calender which will have appointment)

@@ -3,11 +3,12 @@ import { useState } from "react";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import SidebarRight from "./Components/SidebarRight/SidebarRight";
 import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Pages/Home";
-import Team from "./Pages/Team";
-import Calender from "./Pages/Calender";
-import Documents from "./Pages/Documents";
-import Projects from "./Pages/Projects";
+import Dashboard from "./Pages/Dashboard";
+import Settings from "./Pages/Settings";
+import Profile from "./Pages/Profile";
+import Appointments from "./Pages/Appointments";
+import Chats from "./Pages/Chats";
+import Blogs from "./Pages/Blogs";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { AnimatePresence } from "framer-motion";
@@ -39,11 +40,12 @@ function App() {
         <Container>
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/" component={Home} />
-              <Route path="/team" component={Team} />
-              <Route path="/calender" component={Calender} />
-              <Route path="/documents" component={Documents} />
-              <Route path="/projects" component={Projects} />
+              <Route exact path="/" component={Dashboard} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/appointments" component={Appointments} />
+              <Route path="/chats" component={Chats} />
+              <Route path="/blogs" component={Blogs} />
+              <Route path="/settings" component={Settings} />
             </Switch>
           </AnimatePresence>
         </Container>

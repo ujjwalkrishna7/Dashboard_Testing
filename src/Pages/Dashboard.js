@@ -4,16 +4,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
 
-import SmallStats from "./../Components/common/SmallStats";
-import UsersOverview from "./../Components/blog/UsersOverview";
+import SmallStats from "../Components/common/SmallStats";
+import UsersOverview from "../Components/blog/UsersOverview";
 // import UsersByDevice from "./../Components/blog/UsersByDevice";
 // import NewDraft from "./../Components/blog/NewDraft";
 // import Discussions from "./../Components/blog/Discussions";
 // import TopReferrals from "./../Components/common/TopReferrals";
 
-const HomeComponent = ({ smallStats }) => (
+const DashboardComponent = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
-    <h1 className="headerbox">Analytics</h1>
+    <h1 className="headerbox">Dashboard</h1>
     {/* Small Stats Blocks */}
     {/* Page Header */}
     <Row noGutters className="page-header py-2"></Row>
@@ -46,14 +46,14 @@ const HomeComponent = ({ smallStats }) => (
   </Container>
 );
 
-HomeComponent.propTypes = {
+DashboardComponent.propTypes = {
   /**
    * The small stats dataset.
    */
   smallStats: PropTypes.array,
 };
 
-HomeComponent.defaultProps = {
+DashboardComponent.defaultProps = {
   smallStats: [
     {
       label: "Posts",
@@ -151,6 +151,6 @@ HomeComponent.defaultProps = {
   ],
 };
 
-const Home = MotionHoc(HomeComponent);
+const Dashboard = MotionHoc(DashboardComponent);
 
-export default Home;
+export default Dashboard;

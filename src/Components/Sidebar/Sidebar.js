@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-
-//All the svg files
+import { FiSettings } from "react-icons/fi";
+import { BsChatDotsFill } from "react-icons/bs";
+import { FaBlog } from "react-icons/fa";
 import Home from "../../assets/home-solid.svg";
 import Team from "../../assets/social.svg";
 import Calender from "../../assets/sceduled.svg";
-import Projects from "../../assets/starred.svg";
-import Documents from "../../assets/draft.svg";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
@@ -111,9 +110,20 @@ const Item = styled(NavLink)`
   width: 100%;
   padding: 1rem 0;
   cursor: pointer;
-
   display: flex;
   padding-left: 1rem;
+
+  img {
+    width: 1.2rem;
+    height: auto;
+    filter: invert(33%) sepia(47%) saturate(6242%) hue-rotate(251deg)
+      brightness(91%) contrast(104%);
+  }
+
+  .icons {
+    max-width: 18px;
+    color: var(--primary);
+  }
 
   &:hover {
     border-right: 4px solid var(--white);
@@ -122,13 +132,9 @@ const Item = styled(NavLink)`
       filter: invert(17%) sepia(60%) saturate(2119%) hue-rotate(245deg)
         brightness(97%) contrast(105%);
     }
-  }
-
-  img {
-    width: 1.2rem;
-    height: auto;
-    filter: invert(33%) sepia(47%) saturate(6242%) hue-rotate(251deg)
-      brightness(91%) contrast(104%);
+    .icons {
+      color: var(--primary-dark);
+    }
   }
 `;
 
@@ -154,44 +160,28 @@ const Sidebar = () => {
             activeClassName="active"
             to="/"
           >
-            <img src={Home} alt="Home" />
-            <Text clicked={click}>Analytics</Text>
+            <img src={Home} alt="Dashboard" />
+            <Text clicked={click}>Dashboard</Text>
           </Item>
-          <Item activeClassName="active" to="/team">
-            <img src={Team} alt="Team" />
+          <Item activeClassName="active" to="/profile">
+            <img src={Team} alt="Profile" />
             <Text clicked={click}>Profile</Text>
           </Item>
-          <Item activeClassName="active" to="/calender">
-            <img src={Calender} alt="Calender" />
-            <Text clicked={click}>Posts</Text>
+          <Item activeClassName="active" to="/appointments">
+            <img src={Calender} alt="Appointements" />
+            <Text clicked={click}>Appointments</Text>
           </Item>
-          <Item activeClassName="active" to="/documents">
-            <img src={Documents} alt="Documents" />
-            <Text clicked={click}>Documents</Text>
+          <Item activeClassName="active" to="/chats">
+            <BsChatDotsFill size={25} className="icons" />
+            <Text clicked={click}>Chats</Text>
           </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects" />
-            <Text clicked={click}>Projects</Text>
+          <Item activeClassName="active" to="/blogs">
+            <FaBlog size={25} className="icons" />
+            <Text clicked={click}>Blogs</Text>
           </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects1" />
-            <Text clicked={click}>Projects</Text>
-          </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects2" />
-            <Text clicked={click}>Projects</Text>
-          </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects3" />
-            <Text clicked={click}>Projects</Text>
-          </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects4" />
-            <Text clicked={click}>Projects</Text>
-          </Item>
-          <Item activeClassName="active" to="/projects">
-            <img src={Projects} alt="Projects5" />
-            <Text clicked={click}>Projects</Text>
+          <Item activeClassName="active" to="/settings">
+            <FiSettings size={25} className="icons" />
+            <Text clicked={click}>Settings</Text>
           </Item>
         </SlickBar>
       </SidebarContainer>
