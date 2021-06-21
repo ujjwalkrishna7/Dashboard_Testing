@@ -103,7 +103,7 @@ const SidebarRight = ({ sidebarIsOpen, toggle }) => {
             <SidebarLink to="/account">Account</SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRoute to="/signin">Sign In</SidebarRoute>
+            <SidebarRoute to="/button">Button</SidebarRoute>
           </SideBtnWrap>
         </SidebarWrapper>
       </SidebarContainer>

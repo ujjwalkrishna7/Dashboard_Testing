@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import styled from "styled-components";
 
 const Nav = styled.div`
@@ -84,6 +85,11 @@ const NavLinks = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  color: var(--white);
+
+  &:hover {
+    color: var(--grey);
+  }
 `;
 
 const NavBtn = styled.nav`
@@ -135,11 +141,12 @@ const Navbar = ({ toggle }) => {
           <NavItem>
             <NavLinks to="/account">
               <ProfilePhoto src="https://wallpaperaccess.com/full/2213424.jpg" />
-              Account
+              Kris W
+              <RiArrowDropDownLine size={30} />
             </NavLinks>
           </NavItem>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/button">Button</NavBtnLink>
           </NavBtn>
         </NavMenu>
       </NavbarContainer>
