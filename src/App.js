@@ -16,7 +16,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Pages = styled.div`
   padding-top: 90px;
-  padding-left: ${(props) => (props.clicked ? "12rem" : "0")};
+  padding-left: ${(props) => (props.clicked ? "12rem" : "4rem")};
   transition: all 0.5s ease;
   @media only screen and (max-width: 768px) {
     padding-left: ${(props) => (props.clicked ? "0" : "0")};

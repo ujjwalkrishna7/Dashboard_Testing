@@ -2,7 +2,7 @@ import MotionHoc from "./MotionHoc";
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import SmallStats from "../Components/common/SmallStats";
 import UsersOverview from "../Components/blog/UsersOverview";
@@ -12,7 +12,7 @@ import UsersOverview from "../Components/blog/UsersOverview";
 // import TopReferrals from "./../Components/common/TopReferrals";
 
 const DashboardComponent = ({ smallStats }) => (
-  <Container fluid className="main-content-container px-4">
+  <>
     <h1 className="headerbox">Dashboard</h1>
     {/* Small Stats Blocks */}
     {/* Page Header */}
@@ -43,7 +43,7 @@ const DashboardComponent = ({ smallStats }) => (
         <UsersOverview />
       </Col>
     </Row>
-  </Container>
+  </>
 );
 
 DashboardComponent.propTypes = {

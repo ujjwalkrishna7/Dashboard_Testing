@@ -4,10 +4,15 @@
   /* Colors */
   --black: #fff;
   --grey: #777c80;
+  --grey-light: #dddddd;
+  --grey-dark: rgb(90, 90, 90);
   --white: #09090c;
   --background: rgb(240, 245, 255);
   --primary: #803bec;
   --primary-dark: #492388;
+  --secondary: #0a66c2;
+  --secondary-light: #61a6eb;
+  --secondary-dark: #073c70;
 }
 
 a,
@@ -29,7 +34,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Stats */
+/* Stats ChartJS CSS */
 .stats-small {
   min-height: 8.7rem;
   overflow: hidden !important;
@@ -119,7 +124,7 @@ body {
   overflow: hidden;
 }
 
-/* Card */
+/* Dashboard Stat Cards */
 .card-user-overview {
   padding: 10px;
   border-radius: 15px;
@@ -143,6 +148,12 @@ body {
   transform: translateY(-2px);
 }
 
+/* Headerbox */
 .headerbox {
   display: inline-block;
+}
+
+/* Default Bootstrap Tweaks */
+.container {
+  max-width: 95%;
 }
